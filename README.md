@@ -76,4 +76,83 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [Express.js Documentation](https://expressjs.com/)
 - [React Documentation](https://react.dev/)
 - [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Mongoose Documentation](https://mongoosejs.com/docs/) 
+- [Mongoose Documentation](https://mongoosejs.com/docs/)
+
+## Setup Instructions
+
+1. Clone the repository:
+   ```
+   git clone <your-repo-url>
+   cd week-4-mern-integration-assignment-baron929
+   ```
+
+2. Install server dependencies:
+   ```
+   cd server
+   npm install
+   ```
+
+3. Install client dependencies:
+   ```
+   cd ../client
+   npm install
+   ```
+
+4. Configure environment variables:
+   - Create a `.env` file in the `server` folder with:
+     ```
+     MONGO_URI=<your-mongodb-uri>
+     JWT_SECRET=<your-jwt-secret>
+     PORT=5000
+     ```
+
+5. Start the server:
+   ```
+   cd ../server
+   npm start
+   ```
+
+6. Start the client:
+   ```
+   cd ../client
+   npm start
+   ```
+
+---
+
+## API Endpoints
+
+### Posts
+- `GET /api/posts` — Get all posts
+- `GET /api/posts/:id` — Get a single post
+- `POST /api/posts` — Create a new post
+- `PUT /api/posts/:id` — Update a post
+- `DELETE /api/posts/:id` — Delete a post
+
+### Users/Auth
+- `POST /api/auth/register` — Register a new user
+- `POST /api/auth/login` — Login
+
+### Comments
+- `POST /api/comments` — Add a comment
+- `DELETE /api/comments/:id` — Delete a comment
+
+### Categories
+- `GET /api/categories` — Get all categories
+- `POST /api/categories` — Create a category
+- `PUT /api/categories/:id` — Update a category
+- `DELETE /api/categories/:id` — Delete a category
+
+---
+
+## Notes
+
+- All POST/PUT/DELETE endpoints require authentication (JWT token in `Authorization` header).
+- For image uploads, use the `/uploads` endpoint.
+- See the code for more details on request/response formats.
+
+---
+
+## Screenshots
+
+_Add screenshots of your running application here._
